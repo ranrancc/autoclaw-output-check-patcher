@@ -33,6 +33,26 @@ Or run directly:
 curl -fsSL https://raw.githubusercontent.com/ranrancc/autoclaw-output-check-patcher/main/patch-autoclaw.sh | bash
 ```
 
+## Windows
+
+Quit AutoClaw first, then run PowerShell:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\patch-autoclaw.ps1
+```
+
+If you want to run it directly from GitHub:
+
+```powershell
+irm https://raw.githubusercontent.com/ranrancc/autoclaw-output-check-patcher/main/patch-autoclaw.ps1 | iex
+```
+
+If AutoClaw is installed somewhere unusual:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\patch-autoclaw.ps1 -AppPath "C:\Path\To\AutoClaw"
+```
+
 If AutoClaw is installed somewhere else:
 
 ```bash
