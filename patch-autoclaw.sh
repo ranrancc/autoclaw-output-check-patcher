@@ -105,9 +105,9 @@ console.log(`patched ${count} renderer hook(s)`);
 NODE
 
 log "Verifying patch markers"
-rg -q -F 'stage: "local-patch"' "$MAIN_FILE" || fail "Main patch marker missing"
-rg -q -F 'Promise.resolve({ data: { sensitive: false' "$RENDERER_FILE" || fail "Renderer patch marker missing"
-if rg -q '/agentdr/v1/assistant/claw-output-check' "$MAIN_FILE"; then
+grep -q -F 'stage: "local-patch"' "$MAIN_FILE" || fail "Main patch marker missing"
+grep -q -F 'Promise.resolve({ data: { sensitive: false' "$RENDERER_FILE" || fail "Renderer patch marker missing"
+if grep -q -F '/agentdr/v1/assistant/claw-output-check' "$MAIN_FILE"; then
   log "Endpoint string still exists in bundle, but patched agentOutputCheck no longer calls it."
 fi
 
