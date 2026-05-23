@@ -19,6 +19,20 @@ cd autoclaw-output-check-patcher
 bash patch-autoclaw.sh
 ```
 
+For this published repository:
+
+```bash
+git clone https://github.com/ranrancc/autoclaw-output-check-patcher.git
+cd autoclaw-output-check-patcher
+bash patch-autoclaw.sh
+```
+
+Or run directly:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/ranrancc/autoclaw-output-check-patcher/main/patch-autoclaw.sh | bash
+```
+
 If AutoClaw is installed somewhere else:
 
 ```bash
